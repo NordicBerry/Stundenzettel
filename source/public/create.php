@@ -2,10 +2,14 @@
 
 require_once('./dbconnect.php');
 
-$name = $_POST["name"];
-$phone = $_POST["phone"];
+$mitarbeiter = $_POST["mitarbeiter"];
+$datum = $_POST["datum"];
+$beschreibung = $_POST["beschreibung"];
+$projektnummer = $_POST["projektnummer"];
+$uhrzeitvon = $_POST["uhrzeitvon"];
+$uhrzeitbis = $_POST["uhrzeitbis"];
 
-$sql = "INSERT INTO Personen (name, phone) VALUES ('$name', '$phone')";
+$sql = "INSERT INTO stundenzettel (mitarbeiter, datum, beschreibung, projektnummer, uhrzeitvon, uhrzeitbis) VALUES ('$mitarbeiter', '$datum', '$beschreibung', '$projektnummer', '$uhrzeitvon', '$uhrzeitbis')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -16,4 +20,4 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 
-echo "<script>setTimeout(function() { window.location.replace('http://localhost/telefonbuch') }, 1000)</script>";
+echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/') }, 1000)</script>";

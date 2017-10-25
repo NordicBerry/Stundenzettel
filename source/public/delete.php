@@ -4,7 +4,7 @@ require_once('./dbconnect.php');
 
 $id = $_POST["id"];
 
-$sql = "DELETE FROM Personen WHERE id='$id'";
+$sql = "DELETE FROM stundenzettel WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
@@ -14,4 +14,4 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-echo "<script>setTimeout(function() { window.location.replace('http://localhost/telefonbuch') }, 1000)</script>";
+echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/') }, 1000)</script>";

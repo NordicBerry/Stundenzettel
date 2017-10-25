@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row my-5">
         <div class="col">
-            <h1 class="text-center">Telefonbuch App</h1>
+            <h1 class="text-center">Stundenzettel</h1>
         </div>
     </div>
     <div class="row mb-5">
@@ -24,10 +24,10 @@
             <form action="create.php" method="post">
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" class="form-control" name="name" placeholder="Name">
+                        <input type="text" class="form-control" name="mitarbeiter" placeholder="Mitarbeiter">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" name="phone" placeholder="Telefonnummer">
+                        <input type="date" class="form-control" name="datum" placeholder="Datum">
                     </div>
                     <div class="col-2">
                         <button type="submit" class="btn btn-primary btn-block">
@@ -35,16 +35,38 @@
                         </button>
                     </div>
                 </div>
+
+                <form action="create.php" method="post">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="beschreibung" placeholder="Beschreibung">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="projektnummer" placeholder="Projektnummer">
+                        </div>
+                        <div class="col">
+                            <input type="time" class="form-1control" name="uhrzeitvon" placeholder="Uhrzeit von:">
+                        </div>
+                        <div class="col">
+                            <input type="time" class="form-control" name="uhrzeitbis" placeholder="Uhrzeit bis: ">
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fa fa-check"></i>
+                            </button>
+                        </div>
+                    </div>
             </form>
         </div>
     </div>
+
     <div class="row mb-5">
         <div class="col">
             <h2>Suche</h2>
             <form action="index.php" method="get">
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" class="form-control" name="name" placeholder="Name" value="<?php echo $_GET["name"] ?>">
+                        <input type="text" class="form-control" name="mitarbeiter" placeholder="Mitarbeiter" value="<?php echo $_GET["mitarbeiter"] ?>">
                     </div>
                     <div class="col-2">
                         <button type="submit" class="btn btn-primary btn-block">
@@ -75,10 +97,22 @@
                             <div class="form-row">
                                 <input type="hidden" name="id" value="<?php echo $row["id"] ?>">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="name" placeholder="Name" value="<?php echo $row["name"] ?>">
+                                    <input type="text" class="form-control" name="mitarbeiter" placeholder="Mitarbeiter" value="<?php echo $row["mitarbeiter"] ?>">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" name="phone" placeholder="Telefonnummer" value="<?php echo $row["phone"] ?>">
+                                    <input type="text" class="form-control" name="datum" placeholder="Datum" value="<?php echo $row["datum"] ?>">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="beschreibung" placeholder="Beschreibung" value="<?php echo $row["beschreibung"] ?>">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="projektnummer" placeholder="Projektnummer" value="<?php echo $row["projektnummer"] ?>">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="uhrzeitvon" placeholder="Uhrzeit von:" value="<?php echo $row["uhrzeitvon"] ?>">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="uhrzeitbis" placeholder="Uhrzeit bis:" value="<?php echo $row["uhrzeitbis"] ?>">
                                 </div>
                                 <div class="col-1">
                                     <button class="btn btn-danger btn-block" formaction="delete.php">

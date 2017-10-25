@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<style>
+form {
+
+}
+
+
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+}
+
+img.avatar {
+    width: 16%;
+  }
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+
+<form method="POST" action="index.php">
+
+  <div class="imgcontainer">
+    <img src="PGA_Automation_Logo.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <br> <br>
+    <h1>Anmeldemaske für die Stundenzettel-App</h1>
+    <br> <br>
+    <label><h3>Abteilung</h3></label>
+    <br>
+    <input type="text" placeholder="Abteilung eingeben" name="loginabteilung" required>
+    <br><br>
+    <label><h3>Benutzername</h3></label>
+    <br>
+    <input type="text" placeholder="Benutzername eingeben" name="loginname" required>
+    <br><br>
+    <label><h3>Passwort</h3></label>
+    <br>
+    <input type="password" placeholder="Passwort eingeben" name="loginpasswort" required>
+    <br>
+    <br>
+    <button type="submit">Anmelden</button>
+    <br>
+    <input type="checkbox" checked="checked"> Angemeldet bleiben <a href="http://wt-projekt.test/index.php"</a>
+  </div>
+  <div class="container" >
+    <button type="button" class="cancelbtn">Abbrechen</button>
+
+  </div>
+</form>
+</body>
+</html>

@@ -2,9 +2,9 @@
 
 require_once('./dbconnect.php');
 
-$name = $_GET["name"];
+$name = $_GET["mitarbeiter"];
 
-$sql = "SELECT * FROM Personen WHERE INSTR(name, '{$name}') > 0";
+$sql = "SELECT * FROM stundenzettel WHERE INSTR(mitarbeiter, '{$mitarbeiter}') > 0";
 
 $result = $conn->query($sql);
 
