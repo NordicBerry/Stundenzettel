@@ -11,8 +11,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
+
+<style>
+
+button.btn.btn-primary.btn-block {
+    background-color: #30618f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.fa.fa-search {
+  color: white;
+}
+
+img.avatar {
+    width: 30%;
+  }
+
+</style>
+<br><br>
 <body>
 <div class="container">
+<br><br>
+  <img src="PGA_Automation_Logo.png" alt="Avatar" class="avatar">
     <div class="row my-5">
         <div class="col">
             <h1 class="text-center">Stundenzettel</h1>
@@ -21,6 +50,7 @@
     <div class="row mb-5">
         <div class="col">
             <h2>Neuer Eintrag</h2>
+            <br>
             <form action="create.php" method="post">
                 <div class="form-row">
                     <div class="col">
@@ -29,13 +59,8 @@
                     <div class="col">
                         <input type="date" class="form-control" name="datum" placeholder="Datum">
                     </div>
-                    <div class="col-2">
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fa fa-check"></i>
-                        </button>
-                    </div>
                 </div>
-
+                <br>
                 <form action="create.php" method="post">
                     <div class="form-row">
                         <div class="col">
@@ -45,7 +70,7 @@
                             <input type="text" class="form-control" name="projektnummer" placeholder="Projektnummer">
                         </div>
                         <div class="col">
-                            <input type="time" class="form-1control" name="uhrzeitvon" placeholder="Uhrzeit von:">
+                            <input type="time" class="form-control" name="uhrzeitvon" placeholder="Uhrzeit von:">
                         </div>
                         <div class="col">
                             <input type="time" class="form-control" name="uhrzeitbis" placeholder="Uhrzeit bis: ">
@@ -57,12 +82,13 @@
                         </div>
                     </div>
             </form>
-        </div>
+          </div>
     </div>
 
     <div class="row mb-5">
         <div class="col">
             <h2>Suche</h2>
+                <br>
             <form action="index.php" method="get">
                 <div class="form-row">
                     <div class="col">
@@ -81,63 +107,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
-            <h2>Einträge</h2>
-        </div>
-    </div>
-    <?php
-        require_once('./read.php');
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) { ?>
-                <div class="row mb-3">
-                    <div class="col">
-                        <form action="update.php" method="post">
-                            <div class="form-row">
-                                <input type="hidden" name="id" value="<?php echo $row["id"] ?>">
-                                <div class="col">
-                                    <input type="text" class="form-control" name="mitarbeiter" placeholder="Mitarbeiter" value="<?php echo $row["mitarbeiter"] ?>">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="datum" placeholder="Datum" value="<?php echo $row["datum"] ?>">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="beschreibung" placeholder="Beschreibung" value="<?php echo $row["beschreibung"] ?>">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="projektnummer" placeholder="Projektnummer" value="<?php echo $row["projektnummer"] ?>">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="uhrzeitvon" placeholder="Uhrzeit von:" value="<?php echo $row["uhrzeitvon"] ?>">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="uhrzeitbis" placeholder="Uhrzeit bis:" value="<?php echo $row["uhrzeitbis"] ?>">
-                                </div>
-                                <div class="col-1">
-                                    <button class="btn btn-danger btn-block" formaction="delete.php">
-                                        <i class="fa fa-close"></i>
-                                    </button>
-                                </div>
-                                <div class="col-1">
-                                    <button type="submit" class="btn btn-success btn-block">
-                                        <i class="fa fa-check"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            <?php }
-        } else { ?>
-            <div class="row">
-                <div class="col">
-                    <p>Keine Einträge in der Datenbank!</p>
-                </div>
-            </div>
-        <?php }
-    ?>
+<div class="col-2">
+    <button type="button" class="btn btn-primary btn-block"> Einträge der Stundenzettel <a href="http://wt-projekt.test/index1.php"</a>
+        <i class="fa fa-search"></i>
+    </button>
 </div>
+</div>
+</div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

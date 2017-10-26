@@ -13,13 +13,10 @@
 </head>
 
 <style>
-form {
-
-}
 
 
 input[type=text], input[type=password] {
-    width: 50%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -28,13 +25,13 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #30618f;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 70%;
 }
 
 button:hover {
@@ -47,12 +44,8 @@ button:hover {
     background-color: #f44336;
 }
 
-.imgcontainer {
-    text-align: center;
-}
-
 img.avatar {
-    width: 16%;
+    width: 30%;
   }
 
 .container {
@@ -80,12 +73,11 @@ span.psw {
 
 <form method="POST" action="index.php">
 
-  <div class="imgcontainer">
-    <img src="PGA_Automation_Logo.png" alt="Avatar" class="avatar">
-  </div>
+
 
   <div class="container">
-    <br> <br>
+    <img src="PGA_Automation_Logo.png" alt="Avatar" class="avatar">
+    <br> <br><br><br>
     <h1>Anmeldemaske für die Stundenzettel-App</h1>
     <br> <br>
     <label><h3>Abteilung</h3></label>
@@ -102,13 +94,14 @@ span.psw {
     <br>
     <br>
     <button type="submit">Anmelden</button>
-    <br>
+    <br><br>
     <input type="checkbox" checked="checked"> Angemeldet bleiben <a href="http://wt-projekt.test/index.php"</a>
-  </div>
+  </div><br>
   <div class="container" >
     <button type="button" class="cancelbtn">Abbrechen</button>
 
   </div>
+
 </form>
 </body>
 </html>

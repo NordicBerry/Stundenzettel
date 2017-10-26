@@ -2,11 +2,14 @@
 
 require_once('./dbconnect.php');
 
-$id = $_POST["id"];
-$name = $_POST["name"];
-$phone = $_POST["phone"];
+$mitarbeiter = $_POST["mitarbeiter"];
+$datum = $_POST["datum"];
+$beschreibung = $_POST["beschreibung"];
+$projektnummer = $_POST["projektnummer"];
+$uhrzeitvon = $_POST["uhrzeitvon"];
+$uhrzeitbis = $_POST["uhrzeitbis"];
 
-$sql = "UPDATE Personen SET name='$name', phone='$phone' WHERE id='$id'";
+$sql = "UPDATE stundenzettel SET mitarbeiter='$mitarbeiter', datum='$datum', beschreibung='$beschreibung', projektnummer='$projektnummer', uhrzeitvon='$uhrzeitvon', uhrzeitbis='$uhrzeitbis' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
