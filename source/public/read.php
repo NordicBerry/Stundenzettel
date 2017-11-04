@@ -2,12 +2,12 @@
 
 require_once('./dbconnect.php');
 
-$mitarbeiter = $_POST["mitarbeiter"];
-$datum = $_POST["datum"];
-$beschreibung = $_POST["beschreibung"];
-$projektnummer = $_POST["projektnummer"];
-$uhrzeitvon = $_POST["uhrzeitvon"];
-$uhrzeitbis = $_POST["uhrzeitbis"];
+$mitarbeiter = $_GET["mitarbeiter"];
+$datum = $_GET["datum"];
+$beschreibung = $_GET["beschreibung"];
+$projektnummer = $_GET["projektnummer"];
+$uhrzeitvon = $_GET["uhrzeitvon"];
+$uhrzeitbis = $_GET["uhrzeitbis"];
 
 $sql = "SELECT * FROM stundenzettel WHERE INSTR(mitarbeiter, '{$mitarbeiter}', datum, '{$datum}', beschreibung, '{$beschreibung}', projektnummer, '{$projektnummer}', uhrzeitvon, '{$uhrzeitvon}', uhrzeitbis, '{$uhrzeitbis}') > 0";
 

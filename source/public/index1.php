@@ -10,12 +10,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-</head>
 
+<style>
 
+  img.avatar {
+      width: 30%;
+    }
+</style>
 
 <body>
-<div class="container">
+<div class="container"> <br>
   <img src="PGA_Automation_Logo.png" alt="Avatar" class="avatar">
     <div class="row my-5">
         <div class="col">
@@ -30,6 +34,7 @@
                 <br>
         </div>
     </div>
+
     <?php
         require_once('./read.php');
 
