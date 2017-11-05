@@ -3,7 +3,7 @@
 <?php
     session_start();
 
-    $_logindaten = ARRAY("abteilung" => "Entwicklung", "name"=>"admin", "passwort"=>"12345");
+    $_logindaten = ARRAY("abteilung" => "Entwicklung", "name"=>"Anna Schweikert", "passwort"=>"12345");
 
     if (isset($_POST["loginabteilung"]) && isset($_POST["loginname"]) && isset($_POST["loginpasswort"]))
         {

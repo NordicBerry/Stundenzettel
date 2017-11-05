@@ -2,14 +2,11 @@
 
 require_once('./dbconnect.php');
 
-$mitarbeiter = $_POST["mitarbeiter"];
-$datum = $_POST["datum"];
-$beschreibung = $_POST["beschreibung"];
-$projektnummer = $_POST["projektnummer"];
-$uhrzeitvon = $_POST["uhrzeitvon"];
-$uhrzeitbis = $_POST["uhrzeitbis"];
+$id = $_POST["id"];
+$name = $_POST["name"];
+$phone = $_POST["phone"];
 
-$sql = "UPDATE stundenzettel SET mitarbeiter='$mitarbeiter', datum='$datum', beschreibung='$beschreibung', projektnummer='$projektnummer', uhrzeitvon='$uhrzeitvon', uhrzeitbis='$uhrzeitbis' WHERE id='$id'";
+$sql = "UPDATE Personen SET name='$name', phone='$phone' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -19,4 +16,4 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/index.php') }, 1000)</script>";
+echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/eintraege.php') }, 1000)</script>";

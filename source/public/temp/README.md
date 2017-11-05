@@ -1,4 +1,4 @@
-# Stundenzettel-App
+# Telefonbuch App
 Eine Beispiel PHP Applikation nach dem CRUD (Create, Read, Update, Delete) Prinzip. Bestandteil der Web Anwendungen Vorlesung.
 
 ## Datenbank

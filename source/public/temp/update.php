@@ -9,15 +9,14 @@ $projektnummer = $_POST["projektnummer"];
 $uhrzeitvon = $_POST["uhrzeitvon"];
 $uhrzeitbis = $_POST["uhrzeitbis"];
 
-$sql = "INSERT INTO stundenzettel (mitarbeiter, datum, beschreibung, projektnummer, uhrzeitvon, uhrzeitbis) VALUES ('$mitarbeiter', '$datum', '$beschreibung', '$projektnummer', '$uhrzeitvon', '$uhrzeitbis')";
+$sql = "UPDATE stundenzettel SET mitarbeiter='$mitarbeiter', datum='$datum', beschreibung='$beschreibung', projektnummer='$projektnummer', uhrzeitvon='$uhrzeitvon', uhrzeitbis='$uhrzeitbis' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Record updated successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 
-
-echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/') }, 1000)</script>";
+echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/index.php') }, 1000)</script>";
