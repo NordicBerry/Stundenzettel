@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 .DS_Store
 .idea
 .vagrant
 
 *.log
+=======
+.idea
+.DS_Store
+>>>>>>> d1d4b30286073523f6184eb41ff6808877a6ee01
