@@ -20,4 +20,4 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 
-echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/index.php') }, 1000)</script>";
+echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/') }, 1000)</script>";
