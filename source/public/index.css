@@ -1,0 +1,24 @@
+<style>
+          button.btn.btn-primary.btn-block {
+              background-color: #30618f;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 0;
+              border: none;
+              cursor: pointer;
+              width: auto;
+          }
+
+          button:hover {
+              opacity: 0.8;
+          }
+
+          .fa.fa-search {
+            color: white;
+          }
+
+          img.avatar {
+              width: 30%;
+            }
+
+        </style>

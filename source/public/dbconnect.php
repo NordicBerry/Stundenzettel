@@ -6,7 +6,7 @@ $password = "root";
 $dbname = "Stundenzettel";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -24,10 +24,14 @@ mysqli_select_db($conn, $dbname);
 
 
 // Create table if none exists
-$createTable = "CREATE TABLE IF NOT EXISTS `Personen` (
+$createTable = "CREATE TABLE IF NOT EXISTS `stundenzettel` (
   `id` int(11) unsigned NOT NULL auto_increment,
-  `name` varchar(255) NOT NULL default '',
-  `phone` varchar(255) NOT NULL DEFAULT '',
+  `mitarbeiter` varchar(255) NOT NULL default '',
+  `datum` date NOT NULL DEFAULT '',
+  `beschreibung` varchar(255) NOT NULL DEFAULT '',
+  `projektnummer` int(11) NOT NULL DEFAULT '',
+  `uhrzeitvon` time NOT NULL DEFAULT '',
+  `uhrzeitbis` time NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 )";
 
