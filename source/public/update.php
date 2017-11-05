@@ -19,4 +19,8 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
+<<<<<<< HEAD
 echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/index.php') }, 1000)</script>";
+=======
+echo "<script>setTimeout(function() { window.location.replace('http://wt-projekt.test/eintraege.php') }, 1000)</script>";
+>>>>>>> my-temporary-work
